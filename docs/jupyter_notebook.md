@@ -6,8 +6,10 @@ Instructions were pulled from here: https://medium.com/@GalarnykMichael/aws-ec2-
 
 a) run ipython in the terminal.
 b) type the following code:
+```python
 from IPython.lib import passwd
 passwd()
+```
 c) copy down the sha1 string.
 
 2. configure Jupyter Notebook.
