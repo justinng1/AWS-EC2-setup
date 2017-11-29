@@ -1,0 +1,17 @@
+#!/bin/bash 
+set -x
+exec > >(tee /var/log/user-data.log|logger -t user-data ) 2>&1
+echo BEGIN
+
+yum -y update
+yum -y groupinstall "Development tools"
+yum -y install wget zlib-devel openssl-devel sqlite-devel graphviz
+
+wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tar.xz
+tar -xf Python-3.6.3.tar.xz
+cd Python-3.6.3
+./configure
+make
+make install
+pip3 install virtualenv
+pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose sklearn graphviz
