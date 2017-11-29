@@ -22,7 +22,7 @@ cd ~/.jupyter/
 vi jupyter_notebook_config.py
 
 b) paste these lines into jupyter_notebook.config.py.
-
+```python
 c = get_config()
 c.IPKernelApp.pylab = 'inline' 
 c.NotebookApp.certfile = u'/home/ubuntu/certs/mycert.pem' 
@@ -32,6 +32,7 @@ c.NotebookApp.open_browser = False
 # Your password below will be whatever you copied earlier 
 c.NotebookApp.password = u'sha1:941c93244463:0a28b4a9a472da0dc28e79351660964ab81605ae' 
 c.NotebookApp.port = 8888
+```
 
 3. run jupyter notebook.
 jupyter notebook
