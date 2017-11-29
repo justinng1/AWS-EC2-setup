@@ -22,6 +22,7 @@ cd ~/.jupyter/
 vi jupyter_notebook_config.py
 
 b) paste these lines into jupyter_notebook.config.py.
+
 c = get_config()
 c.IPKernelApp.pylab = 'inline' 
 c.NotebookApp.certfile = u'/home/ubuntu/certs/mycert.pem' 
