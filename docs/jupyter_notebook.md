@@ -5,6 +5,7 @@ Instructions were pulled from here: https://medium.com/@GalarnykMichael/aws-ec2-
 1. find sha1 hash of your password for Jupyter Notebook.
 
 a) run ipython in the terminal.
+
 b) type the following code:
 ```python
 from IPython.lib import passwd
@@ -38,6 +39,8 @@ c.NotebookApp.port = 8888
 ```
 
 3. run jupyter notebook.
+```
 jupyter notebook
+```
 
 4. To access your server, enter https://ip-address:port/
