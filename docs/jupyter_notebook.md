@@ -25,7 +25,7 @@ b) paste these lines into jupyter_notebook.config.py.
 ```python
 c = get_config()
 c.IPKernelApp.pylab = 'inline' 
-c.NotebookApp.certfile = u'/home/ubuntu/certs/mycert.pem' 
+c.NotebookApp.certfile = u'/home/ec2-user/certs/mycert.pem' 
 c.NotebookApp.ip = '*' 
 c.NotebookApp.open_browser = False 
 
