@@ -13,13 +13,14 @@ c) copy down the sha1 string.
 2. configure Jupyter Notebook.
 
 a) run the following in the terminal.
-
+```
 jupyter notebook --generate-config 
 mkdir certs
 cd certs
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
 cd ~/.jupyter/
 vi jupyter_notebook_config.py
+```
 
 b) paste these lines into jupyter_notebook.config.py.
 ```python
