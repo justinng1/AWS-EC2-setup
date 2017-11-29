@@ -1,4 +1,4 @@
-#This document shows how to setup Jupyter notebook on my EC2 instance.
+# This document shows how to setup Jupyter notebook on my EC2 instance.
 
 Instructions were pulled from here: https://medium.com/@GalarnykMichael/aws-ec2-part-4-starting-a-jupyter-ipython-notebook-server-on-aws-549d87a55ba9
 
