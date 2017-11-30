@@ -3,9 +3,10 @@ set -x
 exec > >(tee /var/log/user-data.log|logger -t user-data ) 2>&1
 echo BEGIN
 
+rpm -Uvh http://mirror.sfo12.us.leaseweb.net/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
 yum -y update
 yum -y groupinstall "Development tools"
-yum -y install wget zlib-devel openssl-devel sqlite-devel graphviz
+yum -y install wget zlib-devel openssl-devel sqlite-devel graphviz git
 
 wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tar.xz
 tar -xf Python-3.6.3.tar.xz
@@ -15,3 +16,16 @@ make
 make install
 pip3 install virtualenv
 pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose sklearn graphviz
+
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/blas-devel-3.4.2-5.el7.x86_64.rpm
+yum -y localinstall blas-devel-3.4.2-5.el7.x86_64.rpm
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/blas-3.4.2-5.el7.x86_64.rpm
+yum -y localinstall blas-3.4.2-5.el7.x86_64.rpm
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/lapack-devel-3.4.2-5.el7.x86_64.rpm
+yum -y localinstall lapack-devel-3.4.2-5.el7.x86_64.rpm
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/texlive-epsf-svn21461.2.7.4-38.el7.noarch.rpm
+yum -y install texlive-epsf-svn21461.2.7.4-38.el7.noarch.rpm
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/texinfo-tex-5.1-4.el7.x86_64.rpm
+yum -y install texinfo-tex-5.1-4.el7.x86_64.rpm
+yum -y install R
+
