@@ -15,7 +15,7 @@ cd Python-3.6.3
 make
 make install
 pip3 install virtualenv
-pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose sklearn graphviz awscli
+pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose sklearn graphviz awscli tk-devel
 
 wget http://mirror.centos.org/centos/7/os/x86_64/Packages/blas-devel-3.4.2-5.el7.x86_64.rpm
 yum -y localinstall blas-devel-3.4.2-5.el7.x86_64.rpm
